@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { Route } from 'next'
 
 const links = [
   ['Overview', '/'],
@@ -8,8 +9,8 @@ const links = [
   ['Infrastructure Graph', '/infrastructure-graph'],
   ['Incident Timeline', '/incident-timeline'],
   ['Reports', '/reports'],
-  ['Settings', '/settings']
-]
+  ['Settings', '/settings'],
+] as const
 
 export function Nav() {
   return (
@@ -17,7 +18,7 @@ export function Nav() {
       <h2 className="mb-4 text-lg font-semibold text-neon">Resilience SOC</h2>
       <nav className="space-y-2">
         {links.map(([name, path]) => (
-          <Link key={path} href={path} className="block rounded-md px-3 py-2 text-sm text-slate-200 hover:bg-slate-800">
+          <Link key={path} href={path as Route} className="block rounded-md px-3 py-2 text-sm text-slate-200 hover:bg-slate-800">
             {name}
           </Link>
         ))}

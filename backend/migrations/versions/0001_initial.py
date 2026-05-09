@@ -33,7 +33,7 @@ def upgrade() -> None:
         sa.Column('name', sa.String(length=120), nullable=False),
         sa.Column('service_type', sa.String(length=50), nullable=False),
         sa.Column('criticality', sa.Integer(), nullable=False, server_default='3'),
-        sa.Column('metadata', sa.JSON(), nullable=False),
+        sa.Column('asset_metadata', sa.JSON(), nullable=False),
         sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.func.now()),
         sa.Column('updated_at', sa.DateTime(timezone=True), server_default=sa.func.now()),
     )

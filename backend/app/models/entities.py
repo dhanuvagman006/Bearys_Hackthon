@@ -19,7 +19,7 @@ class BackupAsset(Base, TimestampMixin):
     name: Mapped[str] = mapped_column(String(120), index=True)
     service_type: Mapped[str] = mapped_column(String(50))
     criticality: Mapped[int] = mapped_column(Integer, default=3)
-    metadata: Mapped[dict] = mapped_column(JSON, default={})
+    asset_metadata: Mapped[dict] = mapped_column(JSON, default={})
 
 
 class BackupRecord(Base, TimestampMixin):
