@@ -30,9 +30,11 @@ def run_migrations_online() -> None:
     )
 
     async def run_async_migrations() -> None:
-        async with connectable.connect() as connection:
-            await connection.run_sync(_run_migrations)
-        await connectable.dispose()
+        try:
+            async with connectable.connect() as connection:
+                await connection.run_sync(_run_migrations)
+        finally:
+            await connectable.dispose()
 
     def _run_migrations(connection: Connection) -> None:
         context.configure(connection=connection, target_metadata=target_metadata)
