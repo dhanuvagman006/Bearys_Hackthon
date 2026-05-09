@@ -1,0 +1,423 @@
+You are an elite principal cybersecurity architect, cloud resilience engineer, ransomware recovery specialist, distributed systems engineer, DevSecOps lead, and technical documentation expert.
+
+Your task is to design and build a COMPLETE INTERNATIONAL-HACKATHON-LEVEL PROJECT for the following case study:
+
+TITLE:
+“Ransomware Backup System That Failed During Recovery”
+
+OBJECTIVE:
+Create a production-grade ransomware-resilient backup and recovery platform that demonstrates:
+- resilient backup architecture
+- ransomware-resistant storage
+- rapid disaster recovery
+- recovery orchestration
+- backup integrity verification
+- immutable backup protection
+- zero-trust backup access
+- recovery simulation/testing
+- dependency-aware restoration
+- operational readiness during cyberattacks
+
+The project must be EXTREMELY PRACTICAL, technically deep, visually professional, scalable, and implementation-ready.
+
+==================================================
+CORE REQUIREMENTS
+==================================================
+
+The platform MUST solve these failures:
+- corrupted backups
+- outdated backups
+- slow recovery
+- backup infrastructure compromise
+- poor recovery planning
+- lack of dependency mapping
+- untested recovery workflows
+- operational confusion during incidents
+
+The system must:
+- support enterprise-scale infrastructure
+- recover rapidly under pressure
+- isolate backups from ransomware
+- continuously verify recoverability
+- automate recovery sequencing
+- provide operational dashboards
+- simulate ransomware attacks safely
+- be cloud-native and scalable
+- be deployable locally using Docker
+- optionally support Kubernetes deployment
+
+==================================================
+MANDATORY OUTPUT RULES
+==================================================
+
+You MUST:
+- generate COMPLETE production-quality code
+- NEVER give pseudo-code
+- NEVER skip implementation
+- NEVER say “left as exercise”
+- NEVER provide partial snippets
+- ALWAYS create fully working files
+- ALWAYS output directory structures
+- ALWAYS include all source code
+- ALWAYS include configuration files
+- ALWAYS include Docker setup
+- ALWAYS include setup scripts
+- ALWAYS include database schemas
+- ALWAYS include APIs
+- ALWAYS include frontend UI
+- ALWAYS include backend services
+- ALWAYS include security implementations
+- ALWAYS include monitoring/logging
+- ALWAYS include testing framework
+- ALWAYS include documentation
+
+For EVERY file:
+- provide filename
+- provide exact folder path
+- provide complete contents
+
+When code becomes large:
+- continue automatically
+- never stop midway
+- continue from previous file
+- maintain consistency
+
+==================================================
+TECH STACK
+==================================================
+
+Use MODERN ENTERPRISE STACK:
+
+BACKEND:
+- Python FastAPI
+- Async architecture
+- REST APIs
+- WebSockets for live monitoring
+
+FRONTEND:
+- Next.js latest
+- TypeScript
+- TailwindCSS
+- shadcn/ui
+- Recharts for analytics
+- Dark professional cybersecurity theme
+
+DATABASE:
+- PostgreSQL
+
+CACHE / QUEUE:
+- Redis
+- Celery or RabbitMQ
+
+INFRASTRUCTURE:
+- Docker
+- Docker Compose
+- Kubernetes manifests optional
+
+SECURITY:
+- JWT auth
+- RBAC
+- MFA-ready structure
+- Immutable storage logic
+- Encryption at rest
+- Encryption in transit
+
+MONITORING:
+- Prometheus
+- Grafana
+- Structured logging
+
+TESTING:
+- Pytest
+- Integration tests
+- Recovery simulation tests
+
+==================================================
+PROJECT MODULES
+==================================================
+
+Build ALL these modules fully.
+
+1. BACKUP ORCHESTRATION ENGINE
+- automated scheduled backups
+- incremental backups
+- full backups
+- snapshot management
+- backup catalog
+- backup versioning
+
+2. IMMUTABLE BACKUP VAULT
+- write-once-read-many logic
+- ransomware-safe storage
+- air-gap simulation
+- object lock mechanism
+- retention policies
+
+3. BACKUP INTEGRITY VERIFICATION
+- checksum validation
+- corruption detection
+- periodic verification scans
+- automated recovery testing
+
+4. RECOVERY ORCHESTRATOR
+- dependency-aware restoration
+- recovery sequencing engine
+- priority-based restoration
+- automated rollback support
+- rapid restore workflows
+
+5. RANSOMWARE DETECTION SIMULATOR
+- simulate ransomware attacks safely
+- encrypt sample data
+- validate backup survivability
+- attack timeline replay
+
+6. INFRASTRUCTURE DEPENDENCY MAPPER
+- service relationship graph
+- dependency visualization
+- critical-path analysis
+- restore order optimizer
+
+7. INCIDENT RESPONSE DASHBOARD
+- live recovery monitoring
+- backup health metrics
+- recovery progress tracking
+- ransomware alerts
+- recovery readiness score
+
+8. ZERO TRUST ACCESS CONTROL
+- RBAC
+- token security
+- audit logs
+- approval workflows
+- secure backup isolation
+
+9. RECOVERY DRILL ENGINE
+- automated disaster simulations
+- scheduled recovery testing
+- recovery SLA measurements
+- reporting system
+
+10. ANALYTICS & REPORTING
+- recovery time trends
+- backup success analytics
+- infrastructure risk scoring
+- MTTR calculations
+- resilience scoring
+
+==================================================
+ADVANCED FEATURES
+==================================================
+
+Implement:
+- backup immutability
+- delayed deletion protection
+- isolated recovery environments
+- snapshot verification
+- secure restore sandboxes
+- automated threat containment
+- anomaly detection
+- ransomware spread simulation
+- cross-region backup replication
+- policy engine
+- AI-based recovery prioritization (lightweight mock acceptable)
+
+==================================================
+ARCHITECTURE REQUIREMENTS
+==================================================
+
+Generate:
+- system architecture diagrams (Mermaid)
+- recovery workflow diagrams
+- attack flow diagrams
+- dependency graphs
+- sequence diagrams
+
+Include:
+- microservice architecture
+- API gateway
+- backup agents
+- vault storage
+- orchestration layer
+- monitoring pipeline
+
+==================================================
+UI/UX REQUIREMENTS
+==================================================
+
+The frontend must look WORLD-CLASS.
+
+Create:
+- modern cybersecurity dashboard
+- animated status cards
+- recovery timelines
+- ransomware attack simulator UI
+- infrastructure topology map
+- backup vault visualization
+- restore workflow visualization
+- dark enterprise SOC theme
+
+Dashboard pages:
+- Overview
+- Backup Health
+- Recovery Center
+- Attack Simulation
+- Infrastructure Graph
+- Incident Timeline
+- Reports
+- Settings
+
+==================================================
+API REQUIREMENTS
+==================================================
+
+Create fully documented APIs:
+- authentication APIs
+- backup APIs
+- restore APIs
+- vault APIs
+- recovery APIs
+- simulation APIs
+- analytics APIs
+
+Include:
+- OpenAPI docs
+- request validation
+- error handling
+- rate limiting
+
+==================================================
+DATABASE DESIGN
+==================================================
+
+Create:
+- normalized schema
+- migrations
+- indexes
+- backup metadata tables
+- recovery event tables
+- audit logs
+- dependency maps
+- ransomware simulation records
+
+==================================================
+SECURITY REQUIREMENTS
+==================================================
+
+Implement:
+- AES encryption
+- signed backup manifests
+- immutable retention enforcement
+- API security
+- secure secrets handling
+- environment variable management
+- audit logging
+- anti-tampering protections
+
+==================================================
+RECOVERY ENGINE REQUIREMENTS
+==================================================
+
+The recovery system must:
+- prioritize critical systems
+- calculate optimal restore order
+- estimate downtime
+- support parallel restoration
+- validate service health after restore
+- auto-detect failed restores
+- support rollback
+
+==================================================
+TESTING REQUIREMENTS
+==================================================
+
+Create:
+- unit tests
+- integration tests
+- ransomware simulation tests
+- recovery stress tests
+- corruption tests
+- restore verification tests
+
+==================================================
+DOCUMENTATION REQUIREMENTS
+==================================================
+
+Generate:
+- complete README
+- architecture documentation
+- setup guide
+- API documentation
+- deployment guide
+- recovery playbooks
+- incident response workflow
+- security model
+- scalability notes
+
+==================================================
+DEPLOYMENT REQUIREMENTS
+==================================================
+
+Provide:
+- Docker Compose setup
+- production-ready environment configs
+- startup scripts
+- health checks
+- CI/CD workflow examples
+- scalable deployment guidance
+
+==================================================
+HACKATHON OPTIMIZATION
+==================================================
+
+This is for a HIGH-LEVEL INTERNATIONAL HACKATHON.
+
+Therefore:
+- prioritize innovation
+- prioritize realism
+- prioritize enterprise relevance
+- prioritize cybersecurity depth
+- prioritize polished UI
+- prioritize operational practicality
+- prioritize architectural sophistication
+- prioritize resilience engineering
+- prioritize demonstrable recovery workflows
+
+The project should impress:
+- cybersecurity judges
+- distributed systems engineers
+- cloud architects
+- enterprise security leaders
+- infrastructure engineers
+
+==================================================
+DELIVERY FORMAT
+==================================================
+
+IMPORTANT:
+You must build the ENTIRE project step-by-step.
+
+Output order:
+1. complete folder structure
+2. backend implementation
+3. frontend implementation
+4. infrastructure configs
+5. database setup
+6. Docker setup
+7. monitoring stack
+8. testing framework
+9. documentation
+10. deployment instructions
+
+For EVERY section:
+- generate real code
+- generate complete files
+- ensure consistency across files
+
+DO NOT summarize.
+DO NOT shorten.
+DO NOT skip implementation details.
+
+Continue automatically until the ENTIRE project is fully generated.
+
+Begin now.
