@@ -1,0 +1,80 @@
+services:
+  backend:
+    build: ./backend
+    container_name: resilience-backend
+    environment:
+      SECRET_KEY: super-secret
+      POSTGRES_DSN: postgresql+asyncpg://postgres:postgres@postgres:5432/resilience
+      REDIS_URL: redis://redis:6379/0
+      ENCRYPTION_KEY: bXlzdXBlcnNlY3JldGtleW15c3VwZXJzZWNyZXRrZXk=
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+
+  worker:
+    build: ./backend
+    container_name: resilience-worker
+    command: celery -A app.workers.celery_app.celery worker -l info
+    environment:
+      POSTGRES_DSN: postgresql+asyncpg://postgres:postgres@postgres:5432/resilience
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - backend
+      - redis
+
+  frontend:
+    build: ./frontend
+    container_name: resilience-frontend
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:8000/api/v1
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+
+  postgres:
+    image: postgres:16
+    container_name: resilience-postgres
+    environment:
+      POSTGRES_DB: resilience
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: resilience-redis
+    ports:
+      - "6379:6379"
+
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    container_name: resilience-prometheus
+    volumes:
+      - ./infra/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana:11.4.0
+    container_name: resilience-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - ./infra/monitoring/grafana/provisioning:/etc/grafana/provisioning
+
+volumes:
+  pgdata:

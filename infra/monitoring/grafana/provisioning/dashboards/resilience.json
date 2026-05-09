@@ -1,0 +1,13 @@
+{
+  "title": "Ransomware Recovery Operations",
+  "panels": [
+    {
+      "id": 1,
+      "title": "API Request Rate",
+      "type": "timeseries",
+      "targets": [{"expr": "sum(rate(api_requests_total[1m]))"}]
+    }
+  ],
+  "schemaVersion": 39,
+  "version": 1
+}
